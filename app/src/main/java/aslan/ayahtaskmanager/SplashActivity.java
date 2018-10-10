@@ -20,7 +20,7 @@ public class SplashActivity extends AppCompatActivity {
     {
 
     mythread mythread = new mythread();
-    mythread.start():
+    mythread.start();
         super.onResume();
 
     }
