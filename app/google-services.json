@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "565088565494",
+    "firebase_url": "https://taskmanager-371dc.firebaseio.com",
+    "project_id": "taskmanager-371dc",
+    "storage_bucket": "taskmanager-371dc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:565088565494:android:4ea72add2a1b3485",
+        "android_client_info": {
+          "package_name": "aslan.ayahtaskmanager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "565088565494-n40p5j6qfmq1lrf6fi5bs2d3h1fjk5o6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "aslan.ayahtaskmanager",
+            "certificate_hash": "013f43c9a5d380c46de43c04644418dbe5d2a253"
+          }
+        },
+        {
+          "client_id": "565088565494-me4uqrfdgjvel6fc5cn4mu7bsogus4fi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZJLVn1NyQjH492JJFl32_XEBlXJxfwVI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "565088565494-me4uqrfdgjvel6fc5cn4mu7bsogus4fi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
