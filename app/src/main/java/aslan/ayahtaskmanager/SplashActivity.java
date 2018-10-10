@@ -30,7 +30,7 @@ public class SplashActivity extends AppCompatActivity {
         public void run() {
 
             try {
-                sleep(3000);
+                sleep(3000 );
 
 
                   Intent i = new Intent(SplashActivity.this,MainTabsActivity.class);
