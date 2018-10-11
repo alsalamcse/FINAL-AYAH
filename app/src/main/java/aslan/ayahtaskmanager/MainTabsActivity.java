@@ -1,5 +1,6 @@
 package aslan.ayahtaskmanager;
 
+import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -18,6 +19,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import android.widget.TextView;
+
+import aslan.ayahtaskmanager.TaskFragments.MyTaskFragment;
+import aslan.ayahtaskmanager.TaskFragments.ProfileFragment;
+import aslan.ayahtaskmanager.TaskFragments.TasksHistoryFragment;
 
 public class MainTabsActivity extends AppCompatActivity {
 
@@ -131,12 +136,39 @@ public class MainTabsActivity extends AppCompatActivity {
      */
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
+        MyTaskFragment myTaskFragment;
+        TasksHistoryFragment tasksHistoryFragment;
+        ProfileFragment profileFragment;
+
         public SectionsPagerAdapter(FragmentManager fm) {
             super(fm);
         }
 
+
         @Override
         public Fragment getItem(int position) {
+
+            if (position == 0) {
+                if (myTaskFragment == null) {
+                    myTaskFragment = new MyTaskFragment();
+                }
+                return myTaskFragment;
+            }
+
+            if (position == 1) {
+                if (tasksHistoryFragment == null) {
+                    tasksHistoryFragment = new TasksHistoryFragment();
+                }
+                return tasksHistoryFragment;
+            }
+            if (position == 2) {
+                if (profileFragment == null) {
+                    profileFragment = new ProfileFragment();
+                }
+                return profileFragment;
+            }
+
+
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
             return PlaceholderFragment.newInstance(position + 1);
@@ -146,6 +178,24 @@ public class MainTabsActivity extends AppCompatActivity {
         public int getCount() {
             // Show 3 total pages.
             return 3;
+        }
+
+        @Nullable
+        @Override
+        public CharSequence getPageTitle(int position) {
+
+            if(position==0)
+            {
+                return "myTask";
+            }
+            if(position==1)
+            {
+                return "profile";
+            }if(position==2)
+            {
+                return "history";
+            }
+            return super.getPageTitle(position);
         }
     }
 }
