@@ -2,6 +2,7 @@ package aslan.ayahtaskmanager;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -25,5 +26,14 @@ public class SignUpActivity extends AppCompatActivity {
         email2 = (EditText) findViewById(R.id.email2);
         password2 = (EditText)findViewById(R.id.password2);
         save = (Button)findViewById(R.id.save);
+
+        save.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
+
     }
 }
