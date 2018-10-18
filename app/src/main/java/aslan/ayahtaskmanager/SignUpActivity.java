@@ -49,11 +49,43 @@ public class SignUpActivity extends AppCompatActivity {
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                finish();
+                dataHandler();
             }
         });
 
     }
+
+    /**
+     *  get email and password from the field and try to create new user
+     */
+
+    private void dataHandler()
+    {
+        boolean isOk = true; // if all the fields filled well
+     String email22 = email2.getText().toString();
+     String password22 = password2.getText().toString();
+     String first2 = first.getText().toString();
+     String last2 = last.getText().toString();
+     String phone2 = phone.getText().toString();
+
+     if (email22.length()<4 || email22.indexOf('@')<0 || email22.indexOf('.')<0) {
+         email2.setError("Wrong Email");
+         isOk = false; }
+
+     if (password22.length() < 8) {
+     password2.setError("Have to be at least 8 char");
+     isOk = false; }
+
+     if (isOk)
+         creatAcount(email22,password22);
+    }
+
+    /**
+     *  create firebase user using email and pasword
+     * @param email user email
+     * @param passw user password
+     */
+
     //4 - bna2 dala - create acount
 
 
