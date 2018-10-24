@@ -2,6 +2,7 @@ package aslan.ayahtaskmanager;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.SeekBar;
@@ -28,8 +29,19 @@ public class AddTaskActivity extends AppCompatActivity {
         save = (Button)findViewById(R.id.save);
         datepicker = (Button)findViewById(R.id.datepicker);
 
-        save.setOnClickListener();
-        ---
+        save.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        datepicker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
 
     }
 }

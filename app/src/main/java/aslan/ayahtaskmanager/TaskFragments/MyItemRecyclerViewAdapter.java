@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import aslan.ayahtaskmanager.R;
 import aslan.ayahtaskmanager.TaskFragments.MyTaskFragment.OnListFragmentInteractionListener;
 import aslan.ayahtaskmanager.TaskFragments.dummy.DummyContent.DummyItem;
 
