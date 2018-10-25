@@ -24,19 +24,18 @@ public class SplashActivity extends AppCompatActivity {
         super.onResume();
 
     }
+
     public class mythread extends Thread
     {
         @Override
         public void run() {
 
-            try {
-                sleep(3000 );
-
-
-                  Intent i = new Intent(SplashActivity.this,LoginActivity.class);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+            try { sleep(3000 );
+                Intent i = new Intent(SplashActivity.this,LoginActivity.class);
+                startActivity(i);
             }
+            catch (InterruptedException e) {
+                e.printStackTrace(); }
 
         }
     }

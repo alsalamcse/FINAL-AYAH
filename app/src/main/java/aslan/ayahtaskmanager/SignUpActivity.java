@@ -21,6 +21,7 @@ public class SignUpActivity extends AppCompatActivity {
     private EditText phone;
     private EditText email2;
     private EditText password2;
+    private EditText password3;
     private Button save;
 
     //1 - add auth to project
@@ -40,6 +41,8 @@ public class SignUpActivity extends AppCompatActivity {
         phone = (EditText) findViewById(R.id.phone);
         email2 = (EditText) findViewById(R.id.email2);
         password2 = (EditText) findViewById(R.id.password2);
+        password3 = (EditText) findViewById(R.id.password3);
+
         save = (Button) findViewById(R.id.save);
         //3
         auth = FirebaseAuth.getInstance();
@@ -64,6 +67,8 @@ public class SignUpActivity extends AppCompatActivity {
         boolean isOk = true; // if all the fields filled well
      String email22 = email2.getText().toString();
      String password22 = password2.getText().toString();
+     String password33 = password3.getText().toString();
+
      String first2 = first.getText().toString();
      String last2 = last.getText().toString();
      String phone2 = phone.getText().toString();
@@ -75,6 +80,19 @@ public class SignUpActivity extends AppCompatActivity {
      if (password22.length() < 8) {
      password2.setError("Have to be at least 8 char");
      isOk = false; }
+
+     if (first2.length() < 3){
+         first.setError("Set your first name");
+         isOk=false;}
+
+    if (last2.length() < 3){
+            last.setError("Set your last name");
+            isOk=false;}
+
+    if (password22.length() != password33.length()) {
+                password3.setError("Passwords haven't matched");
+            }
+
 
      if (isOk)
          creatAcount(email22,password22);

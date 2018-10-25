@@ -71,15 +71,15 @@
             android:inputType="numberPassword"
             tools:layout_editor_absoluteX="1dp"
             tools:layout_editor_absoluteY="232dp" />
-    </LinearLayout>
 
-    <Button
-        android:id="@+id/save"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="onClick"
-        android:text="Save"
-        tools:layout_editor_absoluteX="250dp"
-        tools:layout_editor_absoluteY="310dp" />
+        <Button
+            android:id="@+id/save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="Save"
+            tools:layout_editor_absoluteX="250dp"
+            tools:layout_editor_absoluteY="310dp" />
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
