@@ -61,16 +61,6 @@
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="202dp" />
 
-        <EditText
-            android:id="@+id/createdate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Create date:"
-            android:inputType="textPersonName"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="248dp" />
-
         <Button
             android:id="@+id/datepicker"
             android:layout_width="match_parent"

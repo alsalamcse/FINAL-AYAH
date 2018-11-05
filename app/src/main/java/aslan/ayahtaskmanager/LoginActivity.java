@@ -33,35 +33,38 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-    }
+//        private void dataHandler()
+//        {
+//            boolean isOk = true; // if all the fields filled well
+//            String email1 = email.getText().toString();
+//            String password1 = password.getText().toString();
+//
+//            if (email1.length()<4 || email1.indexOf('@')<0 || email1.indexOf('.')<0)
+//            {
+//                email.setError("Wrong Email");
+//                isOk = false; }
+//
+//            if (password1.length() < 8)
+//            {
+//                password.setError("Have to be at least 8 char");
+//                isOk = false; }
+//
+//            if (isOk)
+//                creatAcount(email1,password1);
+//            }
 
-        private void dataHandler() {
-            boolean isOk = true; // if all the fields filled well
-            String email11 = email.getText().toString();
-            String password11 = password.getText().toString();
+        }
 
-            if (email11.length() < 4 || email11.indexOf('@') < 0 || email11.indexOf('.') < 0) {
-                email.setError("Wrong Email");
-                isOk = false;
-            }
-
-            if (password11.length() < 8) {
-                password.setError("Have to be at least 8 char");
-                isOk = false;
-            }
-
-            if (isOk) {
-                signin.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        Intent i1 = new Intent(LoginActivity.this, MainTabsActivity.class);
-                        startActivity(i1);
-                    }
-                });
-            }
+//        signin.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View view) {
+//                        Intent i1 = new Intent(LoginActivity.this, MainTabsActivity.class);
+//                        startActivity(i1);
+//                    }
+//                });
+//            }
 
         }
 
 
-    }
 
