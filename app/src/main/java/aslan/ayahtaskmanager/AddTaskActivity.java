@@ -56,8 +56,8 @@ public class AddTaskActivity extends AppCompatActivity {
                 duedate.setError(" Have to be at least 4 letters");
                 isOk = false;
             }
-            if (isOk)
-                
+//            if (isOk)
+
         }
 
 //        datepicker.setOnClickListener(new View.OnClickListener() {

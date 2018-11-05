@@ -90,9 +90,9 @@ public class SignUpActivity extends AppCompatActivity {
             isOk=false;}
 
     if (password22.length() != password33.length()) {
-                password3.setError("Passwords haven't matched");
-            }
-
+         password3.setError("Passwords haven't matched");
+        isOk = false;
+        }
 
      if (isOk)
          creatAcount(email22,password22);
