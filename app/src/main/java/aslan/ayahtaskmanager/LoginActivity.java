@@ -43,8 +43,15 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(i2);
             }
         });
-    }
 
+
+        signin.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            dataHandler();
+        }
+    });
+}
     private void dataHandler() {
         boolean isOk = true; // if all the fields filled well
         String email1 = email.getText().toString();
@@ -72,7 +79,7 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(LoginActivity.this, "signIn Successful.", Toast.LENGTH_SHORT).show();
                  Intent intent=new Intent(LoginActivity.this,MainTabsActivity.class);
                    startActivity(intent);
-                  finish();
+//                  finish();
                 } else {
                     Toast.makeText(LoginActivity.this, "signIn failed." + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                     task.getException().printStackTrace();

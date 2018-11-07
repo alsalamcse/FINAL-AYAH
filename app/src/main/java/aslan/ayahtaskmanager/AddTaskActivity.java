@@ -1,12 +1,22 @@
 package aslan.ayahtaskmanager;
 
 import android.os.Handler;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.SeekBar;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+
+import java.util.Date;
+
+import aslan.ayahtaskmanager.data.MyTask;
 
 public class AddTaskActivity extends AppCompatActivity {
 
@@ -56,7 +66,42 @@ public class AddTaskActivity extends AppCompatActivity {
                 duedate.setError(" Have to be at least 4 letters");
                 isOk = false;
             }
-//            if (isOk)
+           if (isOk)
+           {
+               MyTask task = new MyTask();
+               task.setCreatedate(new Date());
+               task.setDuedate(new Date(Date));
+               task.setText(text1);
+               task.setTitle(title1);
+               task.setImportant(important1);
+               task.setNecessary(necessary1);
+
+               FirebaseAuth auth = FirebaseAuth.getInstance();
+               task.setOwner(auth.getCurrentUser().getEmail());
+
+               DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
+                       // foo2 add bl firebase
+             //  ho mo2asher llproect(jzr) a3ml abn smeh wdefo - bt3ml key autumatically  (3mlyat el adafa t7t:)+ nt2kd eza endaf)
+
+               String key = reference.child("MyTasks").push().getKey();
+               task.setKey(key);
+
+               reference.child("MyTask").child(key).setValue(task).addOnCompleteListener(new OnCompleteListener);
+
+               @Override
+                       public void onComplete(Task<void>task)
+               {
+                   if (task.isSuccesful())
+                   {
+                       Toast.makeText(AddTaskActivity.this, "Add Succesful", Toast.LENGTH_SHORT).show();
+                   }
+                   else
+                       Toast.makeText(AddTaskActivity.this, "Add Failed", Toast.LENGTH_SHORT).show();
+
+
+               }
+           }
+
 
         }
 
