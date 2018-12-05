@@ -64,7 +64,7 @@ public class SignUpActivity extends AppCompatActivity {
 
     private void dataHandler()
     {
-        boolean isOk = true; // if all the fields filled well
+      boolean isOk = true; // if all the fields filled well
      String email22 = email2.getText().toString();
      String password22 = password2.getText().toString();
      String password33 = password3.getText().toString();

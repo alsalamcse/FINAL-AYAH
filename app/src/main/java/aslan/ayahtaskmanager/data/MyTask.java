@@ -7,6 +7,7 @@ public class MyTask {
     private String key,title,text;
     private int important, necessary;
     private Date createdate,duedate;
+    private String owner;
 
     public MyTask()
     {
@@ -81,5 +82,9 @@ public class MyTask {
                 ", createdate=" + createdate +
                 ", duedate=" + duedate +
                 '}';
+    }
+
+    public void setOwner(String owner) {
+        this.owner = owner;
     }
 }
