@@ -10,10 +10,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 import aslan.ayahtaskmanager.R;
 import aslan.ayahtaskmanager.TaskFragments.dummy.DummyContent;
 import aslan.ayahtaskmanager.TaskFragments.dummy.DummyContent.DummyItem;
+import aslan.ayahtaskmanager.data.MyTask;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -61,6 +69,25 @@ public class MyTaskFragment extends Fragment {
         return view;
     }
 
+
+    private List<MyTask>readTasks()
+    {
+        ArrayList<MyTask>myTasks = null;
+        // reference to the database root
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
+       reference.child("MyTask").addValueEventListener(new ValueEventListener() {
+           @Override
+           public void onDataChange(DataSnapshot dataSnapshot) {
+               
+           }
+
+           @Override
+           public void onCancelled(DatabaseError databaseError) {
+
+           }
+       });
+        return myTasks;
+    }
 
     @Override
     public void onAttach(Context context) {
